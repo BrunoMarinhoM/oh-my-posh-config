@@ -11,37 +11,23 @@
         {
           "type": "session",
           "style": "diamond",
-          "trailing_diamond": "\ue0b0",
+          "trailing_diamond": "\ue0b5",
+          "leading_diamond": "\ue0b7",
           "template": " {{ if .SSHSession }}\ueba9 {{ end }}{{ .UserName }} ",
-          "background": "p:green",
-          "foreground": "p:black",
           "Text": "",
+          "background": "p:#ffffff, transparent",
+          "foreground": "p:red",
           "Duration": 0,
           "NameLength": 0
         },
         {
-          "background": "#FF99FF",
-          "foreground": "#111111",
-          "powerline_symbol": "\ue0b0",
-          "properties": {
-            "display_mode": "environment",
-            "fetch_virtual_env": true,
-            "home_enabled": true
-          },
-          "style": "powerline",
-          "template": " {{ if .Venv }}({{ .Venv }}){{ end }} ",
-          "type": "python"
-        },
-        {
           "type": "path",
           "style": "diamond",
-          "trailing_diamond": "\ue0b0",
-          "powerline_symbol": "\ue0b0",
+          "trailing_diamond": "\ue0b1",
           "template": " \uea83 {{ path .Path .Location }} ",
           "properties": {
             "style": "folder"
           },
-          "background": "p:blue",
           "foreground": "p:white",
           "Text": "",
           "Duration": 0,
@@ -70,22 +56,6 @@
       "NameLength": 0
     }
   ],
-  "transient_prompt": {
-    "template": " \ue235 <p:blue,transparent>\ue0b6</><,p:blue, transparent> {{ .Folder }} </><p:blue,transparent>\ue0b0</> ",
-    "background": "p:blue, transparent",
-    "foreground": "p:black",
-    "Text": "",
-    "Duration": 0,
-    "NameLength": 0
-  },
-  "secondary_prompt": {
-    "template": " \ue235 <p:yellow,transparent>\ue0b6</><,p:yellow, transparent> > </><p:yellow,transparent>\ue0b0</> ",
-    "background": "p:blue, transparent",
-    "foreground": "p:black, transparent",
-    "Text": "",
-    "Duration": 0,
-    "NameLength": 0
-  },
   "palette": {
     "black": "#262B44",
     "blue": "#4B9580",
