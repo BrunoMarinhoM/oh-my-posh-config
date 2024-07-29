@@ -24,8 +24,8 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     type = 'path'
     style = 'diamond'
     trailing_diamond = ''
-    template = '  {{ path .Path .Location }} '
-    background = ''
+    template = '  {{ .Path }} '
+    background = 'p:#ffffff'
     foreground = 'p:white'
     Text = ''
     Duration = 0
@@ -34,21 +34,12 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     [blocks.segments.properties]
       style = 'folder'
 
-[[tooltips]]
-  type = 'aws'
-  tips = ['aws']
-  style = 'diamond'
-  leading_diamond = ''
-  trailing_diamond = ''
-  template = '  {{ .Profile }}{{ if .Region }}@{{ .Region }}{{ end }} '
-  background = 'p:blue'
+[transient_prompt]
+  template = '> '
+  background = 'transparent'
   foreground = 'p:white'
-  Text = ''
-  Duration = 0
-  NameLength = 0
 
-  [tooltips.properties]
-    display_default = true
+
 
 [palette]
   black = '#262B44'
