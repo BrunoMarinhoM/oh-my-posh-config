@@ -1,5 +1,4 @@
 #:schema https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
-
 version = 2
 final_space = true
 console_title_template = '{{ .Shell }} in {{ .Folder }}'
@@ -7,35 +6,43 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
 [[blocks]]
   type = 'prompt'
   alignment = 'left'
+  newline = true
 
   [[blocks.segments]]
-    type = 'session'
-    style = 'diamond'
-    leading_diamond = ''
-    trailing_diamond = ''
-    template = ' {{ if .SSHSession }} {{ end }}{{ .UserName }} '
-    background = 'p:#ffffff, transparent'
-    foreground = 'p:red'
-    Text = ''
-    Duration = 0
-    NameLength = 0
+    type = 'python'
+    style = 'powerline'
+    template = '({{ .Venv }}) '
+    foreground = '#ff5533'
+    home_enabled = true
 
   [[blocks.segments]]
+    newline = true
     type = 'path'
-    style = 'diamond'
-    trailing_diamond = ''
-    template = '  {{ .Path }} '
+    style = 'powerline'
+    template = '[ {{ .Path }}] '
     background = 'p:#ffffff'
-    foreground = 'p:white'
+    foreground = '#ff5500'
     Text = ''
-    Duration = 0
-    NameLength = 0
 
     [blocks.segments.properties]
       style = 'folder'
 
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+  newline = true
+
+  [[blocks.segments]]
+    type = 'text'
+    style = 'plain'
+    foreground_templates = [
+  "#aa66ff"
+    ]
+    background = 'transparent'
+    template = '[󰞷]-'
+
 [transient_prompt]
-  template = '> '
+  template = ''
   background = 'transparent'
   foreground = 'p:white'
 
